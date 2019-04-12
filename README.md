@@ -2,10 +2,10 @@
 Jmeter请求接口，将获取倒的数据与数据库对比  
 涉及的知识：mysql、java、正则表达式；需要的插件：mysql-connector-java-5.1.31.jar
 
-#### step1:下载连接数据库插件
+### step1:下载连接数据库插件
 1.将mysql-connector-java-5.1.31.jar放在jmeter安装目录lib目录下
 !["插件路径"](https://raw.githubusercontent.com/ming-zh/JmeterTest/master/imgs/mysql-connnector.jpg)   
-#### step2:接口请求与参数传递     
+### step2:接口请求与参数传递     
 2.新建线程组    
 3.新建Csv Data Set Config,用来读取店铺名称   
 !["csv配置"]  
@@ -22,7 +22,7 @@ Jmeter请求接口，将获取倒的数据与数据库对比
 9.提取店铺接口返回的"id","mallId","floor"字段信息  
 注："id":(.+?),"mallId":"(.+?)","floor":(.+?), 表达式中内容从响应结果中直接copy,要提取的部分用(.+?)代替，这种事非贪婪匹配  
 $1$$2$$3$ 表示分别引用 id,mallId ,floor  
-#### step2:添加JDBC Connection Configuration   
+### step3:添加JDBC Connection Configuration   
 常见问题排查：Could not create connection to database server：  
 a.mysql-connector-java.jar版本过低  
 b.Database URL配置错误
