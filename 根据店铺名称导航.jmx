@@ -15,7 +15,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">153</stringProp>
+          <stringProp name="LoopController.loops">50</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
@@ -30,7 +30,7 @@
           <stringProp name="TestPlan.comments">读取店铺名称文件</stringProp>
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding"></stringProp>
-          <stringProp name="filename">F:\yunshen\jmeterScript\Cases\robot_sqeak.csv</stringProp>
+          <stringProp name="filename">F:\yunshen\jmeterScript\new\Cases\robot_sqeak.csv</stringProp>
           <boolProp name="quotedData">false</boolProp>
           <boolProp name="recycle">true</boolProp>
           <stringProp name="shareMode">shareMode.all</stringProp>
@@ -174,6 +174,7 @@ log.info(&quot;店铺id:&quot;+Result.get(0).get(&quot;id&quot;));
 log.info(&quot;店铺title:&quot;+Result.get(0).get(&quot;title&quot;));
 position_id = Result.get(0).get(&quot;position_id&quot;);
 log.info(&quot;position_id:&quot;+position_id);
+
 if(position_id!=null){
 	Failure = false;
 	FailureMessage = &quot;导航点位存在&quot;;
@@ -216,7 +217,7 @@ else{
                 <assertionsResultsToSave>0</assertionsResultsToSave>
               </value>
             </objProp>
-            <stringProp name="filename">C:\Users\lenovo\Desktop\testResult.txt</stringProp>
+            <stringProp name="filename">F:\yunshen\jmeterScript\new\JmeteRport\testResult.txt</stringProp>
           </ResultCollector>
           <hashTree/>
         </hashTree>
@@ -254,7 +255,7 @@ else{
               <assertionsResultsToSave>0</assertionsResultsToSave>
             </value>
           </objProp>
-          <stringProp name="filename">C:\Users\lenovo\Desktop\testResult.csv</stringProp>
+          <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
