@@ -38,16 +38,16 @@ c.JDBC Driver class配置错误
 注：获取数据库请求结果，List Result = vars.getObject(results); 此处的results为上一步我们自定义的参数  
 Result.get(0).get("id")获取id, Result.get(0).get("title"))获取title, Result.get(0).get("position_id") 获取position_id  
 我们可以把结果打印出来，便于调试 log.info("查询结果："+Result); log.info("position_id:"+Result.get(0).get("position_id"));   
-断言的写法：  
-if(position_id!=null){
-	Failure = false;
-	FailureMessage = "导航点位存在";
-	}
-else{
-	Failure = true;
-	FailureMessage ="导航点位不存在,id:"+Result.get(0).get("id").toString()+",title:"+Result.get(0).get("title").toString()+",floor:"+Result.get(0).get("floor").toString();
+断言的写法：    
+if(position_id!=null){  
+	Failure = false;    
+	FailureMessage = "导航点位存在";  
+	}  
+else{  
+	Failure = true;  
+	FailureMessage ="导航点位不存在,id:"+Result.get(0).get("id").toString()+",title:"+Result.get(0).get("title").toString()+",floor:"+Result.get(0).get("floor").toString();  
 
-	}
+	}  
 注：FailureMessage中必须将获取的信息转化为字符串，否则会报错 ，如Result.get(0).get("id").toString()   
 !["数据库结果断言"](https://github.com/ming-zh/JmeterTest/blob/master/imgs/BeanShellAssert.jpg)   
 !["数据库结果断言log"](https://github.com/ming-zh/JmeterTest/blob/master/imgs/assertresult2.jpg)   
